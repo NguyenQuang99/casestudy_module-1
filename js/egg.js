@@ -3,9 +3,9 @@ let egg = function(game){
     this.x          = 0;
     this.y          = 100;
     this.img        = null; // cái này chứa hình ảnh của trứng
-    this.type       = 1; // loại quả trứng, có 2 loại
+    this.type       = 1; //    loại quả trứng, có 2 loại
     this.popped     = false; // quả trứng đã vỡ chưa, nếu rơi xuống thì quả trứng vỡ
-    this.visible    = true;
+    this.visible    = true;  // nhìn thấy
     this.addedScore = false; // kiểm tra trứng này đã được tính điểm.
 
     let self = this;
@@ -36,11 +36,15 @@ let egg = function(game){
         }
         else {
             this.popped = true;
+         //   this.Score_popped();
         }
 
         if (this.popped) {
             this.img = this.game.resource.egg_popped.img;
         }
+        // if(this.popped == true && this.popped == 3) {
+        //     return;
+        // }
 
         this.checkInBowl();
     };
@@ -60,6 +64,11 @@ let egg = function(game){
             }
         }
     };
+    // function Score_popped() {
+    //     this.game.score -= this.type;
+    //     this.addedScore = true;
+    //
+    // }
 
     this.draw = function(){
         if (this.visible){

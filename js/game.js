@@ -1,7 +1,7 @@
 let game = function(){
     this.canvas         = null;
     this.context        = null;
-    this.resource       = null;
+    this.resource       = null;  // nguồn
     this.girl         = [];
     this.eggs           = [];
     this.bar            = null;
@@ -40,6 +40,9 @@ let game = function(){
     this.start = function(){
         this.loop();
     };
+    // this.gameOver = function () {
+    //
+    // }
 
     this.loop = function(){
         self.update();
@@ -75,7 +78,7 @@ let game = function(){
         if (self.resourceLoaded){
             let newEgg = new egg(self);
             newEgg.init();
-            self.eggs.push(newEgg); // cho vào mảng
+            self.eggs.push(newEgg); // cho vào mảng cac qua trung
         }
     };
 

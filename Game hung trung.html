@@ -7,9 +7,12 @@
 <head>
     <title>Game Hung Trung</title>
 </head>
+    <style type="text/css">
+    body {
+        background-color: aqua;
+    }
+</style>
 <body>
-
-
 <script type="text/javascript" src="js/resource.js"></script>
 <script type="text/javascript" src="js/bar.js"></script>
 <script type="text/javascript" src="js/girl.js"></script>
@@ -19,14 +22,11 @@
 <script type="text/javascript">
     let hungTrung = new game();
     hungTrung.init();
-    hungTrung.start();
+   // hungTrung.start();
+
 </script>
-
-
-
-<style type="text/css">
-    body {
-        background-color: aqua;
-    }
-</style>
+<br>
+<input type="button" value="Start " onclick="hungTrung.start()" style="background-color: darkgreen">
+<input type="reset" onclick="location.reload()" style="background-color: red">
+</body>
 </html>

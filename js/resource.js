@@ -12,7 +12,7 @@ let gameImage = function (name) {
         this.img.src = 'images/' + name + '.png';
     }
 };
-
+// nguon
 let resource = function (game) {
     this.game = game;
     this.bar = new gameImage('bar'); // là cái thanh cho gà đậu
@@ -21,7 +21,7 @@ let resource = function (game) {
     this.egg1 = new gameImage('egg1'); // có 2 loại trứng
     this.egg2 = new gameImage('egg2'); // có 2 loại trứng
     this.egg_popped = new gameImage('egg-popped');
-    this.shit = new gameImage('shit');
+ //   this.shit = new gameImage('shit');
 
     let self = this;
 
@@ -33,10 +33,10 @@ let resource = function (game) {
         this.egg1.load();
         this.egg2.load();
         this.egg_popped.load();
-        this.shit.load();
+    //    this.shit.load();
 
         setInterval(function () {
-            self.checkAllImageLoaded();
+            self.checkAllImageLoaded();    //
         }, 500)
     };
 
@@ -49,8 +49,8 @@ let resource = function (game) {
             (this.girl.loaded) &&
             (this.egg1.loaded) &&
             (this.egg2.loaded) &&
-            (this.egg_popped.loaded) &&
-            (this.shit.loaded)
+            (this.egg_popped.loaded) //&&
+   //         (this.shit.loaded)
         ) {
             this.game.resourceLoaded = true;
         }
